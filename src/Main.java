@@ -22,5 +22,39 @@ public class Main {
         {
             System.out.println(randomYears+ " год является високосным");}
         else
-            System.out.println(randomYears+" год не является високосным");}
+            System.out.println(randomYears+" год не является високосным");
+
+        //Task 2
+    int methodRandomOs =methodRandomOs();
+    int randomYearsPhone = methodRandomYearsPhone();
+        if (methodRandomOs == 1 && randomYearsPhone> 2015)
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        if (methodRandomOs== 1 && randomYearsPhone < 2015)
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        else {
+            if (methodRandomOs == 0 && randomYearsPhone > 2015)
+                System.out.println("Установите версию приложения для Android по ссылке");
+            if (methodRandomOs == 0 && randomYearsPhone < 2015)
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        }
+    }
+
+    public static int methodRandomYearsPhone(){
+
+        java.util.Random random = new java.util.Random();
+        int min = 2000;
+        int max = 2023;
+        int diff = max - min;
+        int randomYearsPhone = random.nextInt(diff)+ min;
+        return randomYearsPhone;
+    }
+        public static int methodRandomOs(){
+
+            java.util.Random random = new java.util.Random();
+            int min = 1;
+            int max = 3;
+            int diff = max - min;
+            int methodRandomOs = random.nextInt(diff)+ min;
+            return methodRandomOs;
+    }
 }
