@@ -10,7 +10,7 @@ public class Main {
 
 
         System.out.println ("Task 3");
-        printDelivery(methodDeliveryDistance());
+        System.out.println("Потребуется дней: "+ printDelivery(methodDeliveryDistance()) );
     }
 
 
@@ -68,14 +68,12 @@ public class Main {
         int methodDeliveryDistance = random.nextInt(diff)+ min;
         return methodDeliveryDistance;
     }
-    public static void printDelivery(int deliveryDistance) {
+    public static int printDelivery(int deliveryDistance) {
     int deliveryDays = 1;
-
-    if ( deliveryDistance > 60){deliveryDays =(Math.abs(deliveryDistance-60)+2);
-    }
-                    System.out.println("Потребуется дней: "+ deliveryDays );
-
+    if ( deliveryDistance >= 60){deliveryDays =(Math.abs(deliveryDistance-60)+2);
 
 }
+    return deliveryDays;
+    }
 }
 
